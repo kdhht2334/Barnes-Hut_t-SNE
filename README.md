@@ -2,7 +2,8 @@
 Comprehensive guidance for using Barnes-Hut t-SNE.
 
 <p align="center">
-  <img width="1000" height="500" src="/pic/bhtsne_resized.png">
+  <img width="1000" height="500" src="/pic/bhtsne_resized.png
+  <figcaption>{{ FIgure 1. Barnes-Hut t-SNE visualization using ImageNet dataset }}</figcaption>
 </p>
 
 
