@@ -5,6 +5,14 @@ Comprehensive guidance for using Barnes-Hut t-SNE.
   <img width="500" height="250" src="/pic/bhtsne_resized.png">
 </p>
 
+
+----
+#### Requirements
+```shell
+pip install -r requirements.txt
+```
+
+
 ----
 #### Usage
 
