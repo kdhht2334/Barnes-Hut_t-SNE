@@ -58,4 +58,6 @@ Optimizing Barnes-Hut t-SNE (Microsoft research blog) [[website]](https://www.mi
 
 Original paper [[paper]](http://lvdmaaten.github.io/publications/papers/JMLR_2014.pdf)
 
+----
+#### Milestone
 
