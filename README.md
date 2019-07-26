@@ -2,7 +2,7 @@
 Comprehensive guidance for using Barnes-Hut t-SNE.
 
 <p align="center">
-  <img width="500" height="250" src="/pic/bhtsne_resized.png">
+  <img width="1000" height="500" src="/pic/bhtsne_resized.png">
 </p>
 
 
@@ -15,6 +15,12 @@ pip install -r requirements.txt
 
 ----
 #### Usage
+
+0. Just run run.sh
+```shell
+chmod 755 run.sh
+./run.sh
+```
 
 1. First, load numpy array and save text format.
 ```shell
