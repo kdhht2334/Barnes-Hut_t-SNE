@@ -1,4 +1,4 @@
-# Barnes-Hut t-SNE using python
+# :sunrise_over_mountains: Barnes-Hut t-SNE using python
 Comprehensive guidance for using Barnes-Hut t-SNE.
 
 <p align="center">
@@ -8,20 +8,22 @@ Comprehensive guidance for using Barnes-Hut t-SNE.
 
 
 ----
-#### Requirements
+#### :notes: Requirements
 ```shell
 pip install -r requirements.txt
 ```
 
 
 ----
-#### Usage
+#### :sunny: Usage
 
 0. Just run run.sh
 ```shell
 chmod 755 run.sh
 ./run.sh
 ```
+
+or if you want to specific details, follow description.
 
 1. First, load numpy array and save text format.
 ```shell
@@ -47,14 +49,14 @@ python3 02_visualize_and_save.py
 
 
 ----
-#### Website
+#### :cloud: Website
 Author's website [[website]](https://lvdmaaten.github.io/tsne/)
 
 Optimizing Barnes-Hut t-SNE (Microsoft research blog) [[website]](https://www.microsoft.com/en-us/research/blog/optimizing-barnes-hut-t-sne/)
 
 
 ----
-#### Reference
+#### :palm_tree: Reference
 
 Original paper [[paper]](http://lvdmaaten.github.io/publications/papers/JMLR_2014.pdf)
 
