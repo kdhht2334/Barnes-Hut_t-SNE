@@ -17,7 +17,7 @@ pip install -r requirements.txt
 ----
 #### :sunny: Usage
 
-0. Just run run.sh
+0. Just run `run.sh`
 ```shell
 chmod 755 run.sh
 ./run.sh
