@@ -1,0 +1,53 @@
+# I refer to below link: 
+# https://www.microsoft.com/en-us/research/blog/optimizing-barnes-hut-t-sne/
+
+The first step is to check out and build the code:
+
+    $ git clone https://github.com/lvdmaaten/bhtsne.git
+    Cloning into 'bhtsne'...
+    remote: Counting objects: 205, done.
+    remote: Total 205 (delta 0), reused 0 (delta 0), pack-reused 205
+    Receiving objects: 100% (205/205), 83.59 KiB | 2.70 MiB/s, done.
+    Resolving deltas: 100% (110/110), done.
+    $ cd bhtsne
+    $ g++ -O2 -g -Wall -Wno-sign-compare sptree.cpp tsne.cpp tsne_main.cpp -o bh_tsne
+
+To get an idea of its current performance, let’s test it on some real-world data, the GloVe word vectors:
+
+    $ curl -LO http://nlp.stanford.edu/data/glove.6B.zip
+      % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                     Dload  Upload   Total   Spent    Left  Speed
+      0   308    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+    100  822M  100  822M    0     0  5661k      0  0:02:28  0:02:28 --:--:-- 3072k
+    $ unzip glove.6B.zip
+    Archive:  glove.6B.zip
+      inflating: glove.6B.50d.txt
+      inflating: glove.6B.100d.txt
+      inflating: glove.6B.200d.txt
+      inflating: glove.6B.300d.txt
+
+    We have to strip out the first column, which is the words themselves:
+
+    $ cut -d' ' -f2- glove.6B.50d.txt >glove.6B.50d.cut.txt
+
+And now we can use the Python wrapper to run the tool:
+
+    $ ./bhtsne.py -v -r1 -i glove.6B.50d.cut.txt -o glove.6B.50d.tsne.txt
+    Read the 400000 x 50 data matrix successfully!
+    Using random seed: 1
+    Using no_dims = 2, perplexity = 50.000000, and theta = 0.500000
+    Computing input similarities...
+    Building tree...
+     - point 0 of 400000
+    ...
+     - point 390000 of 400000
+    Input similarities computed in 21409.84 seconds (sparsity = 0.000682)!
+    Learning embedding...
+    Iteration 50: error is 131.843420 (50 iterations in 729.03 seconds)
+    ...
+    Iteration 999: error is 6.373127 (50 iterations in 654.72 seconds)
+    Fitting performed in 15039.99 seconds.
+    Wrote the 400000 x 2 data matrix successfully!
+    ./bhtsne.py -v -r1 -i glove.6B.50d.cut.txt -o glove.6B.50d.tsne.txt  36697.76s user 228.13s system 99% cpu 10:17:09.79 total
+
+Wow, that took a long time! Let’s see if we can speed it up a bit.
