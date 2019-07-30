@@ -64,5 +64,5 @@ Original paper [[paper]](http://lvdmaaten.github.io/publications/papers/JMLR_201
 #### Milestone
 
 - [x] Usage of BH t-SNE
-- [] Compare other compression methods
+- [ ] Compare other compression methods
 
