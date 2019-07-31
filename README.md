@@ -2,20 +2,25 @@
 Comprehensive guidance for using Barnes-Hut t-SNE.
 
 <p align="center">
-  <img width="1000" height="500" src="/pic/bhtsne_resized.png" alt>
+  <img width="1000" height="700" src="/pic/bhtsne_resized.png" alt>
   <em>FIgure 1. Barnes-Hut t-SNE visualization using ImageNet dataset</em>
+</p>
+
+<p align="center">
+  <img width="1000" height="700" src="/pic/tsne_resized.png" alt>
+  <em>FIgure 2. t-SNE visualization using ImageNet dataset</em>
 </p>
 
 
 ----
-#### :notes: Requirements
+### :notes: Requirements
 ```shell
 pip install -r requirements.txt
 ```
 
 
 ----
-#### :sunny: Usage
+### :sunny: Try bh t-SNE
 
 0. Just run `run.sh`
 ```shell
@@ -49,19 +54,28 @@ python3 02_visualize_and_save.py
 
 
 ----
-#### :cloud: Website
+### :umbrella: Try other methods (Random, PCA, Spectral, and t-SNE)
+
+1. All you have to do is just execute like below.
+```shell
+python3 03_compare_other_methods.py
+```
+
+
+----
+### :cloud: Website
 Author's website [[website]](https://lvdmaaten.github.io/tsne/)
 
 Optimizing Barnes-Hut t-SNE (Microsoft research blog) [[website]](https://www.microsoft.com/en-us/research/blog/optimizing-barnes-hut-t-sne/)
 
 
 ----
-#### :palm_tree: Reference
+### :palm_tree: Reference
 
 Original paper [[paper]](http://lvdmaaten.github.io/publications/papers/JMLR_2014.pdf)
 
 ----
-#### Milestone
+### Milestone
 
 - [x] Usage of BH t-SNE
 - [ ] Compare other compression methods
