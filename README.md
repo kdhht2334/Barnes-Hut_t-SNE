@@ -56,7 +56,7 @@ python3 02_visualize_and_save.py
 ----
 ### :umbrella: Try other methods (Random, PCA, Spectral, and t-SNE)
 
-1. All you have to do is just execute like below.
+1. All you have to do is just execute below python file.
 ```shell
 python3 03_compare_other_methods.py
 ```
@@ -77,6 +77,6 @@ Original paper [[paper]](http://lvdmaaten.github.io/publications/papers/JMLR_201
 ----
 ### Milestone
 
-- [x] Usage of BH t-SNE
-- [ ] Compare other compression methods
+- [x] Usage of bh t-SNE
+- [x] Compare other methods
 
