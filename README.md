@@ -30,22 +30,22 @@ chmod 755 run.sh
 
 or if you want to specific details, follow description.
 
-1. First, load numpy array and save text format.
+1. Load numpy array and save text format.
 ```shell
 python3 01_load_and_write.py
 ```
 
-2. Second, compile Barnes-Hut t-SNE source.
+2. Compile Barnes-Hut t-SNE source.
 ```shell
 g++ -O2 -g -Wall -Wno-sign-compare sptree.cpp tsne.cpp tsne_main.cpp -o bh_tsne
 ```
 
-3. Third, run Barnes-Hut t-SNE to obtain reduced (projected) coordinates.
+3. Run Barnes-Hut t-SNE to obtain reduced (projected) coordinates.
 ```shell
 ./bhtsne.py -v -r1 -i manifold_hist.txt -o manifold_hist.tsne.txt
 ```
 
-4. Last, visualize and save png format.
+4. Visualize and save png format.
 ```shell
 python3 02_visualize_and_save.py
 ```
